@@ -13,9 +13,24 @@ public class EmployeeController : Controller
     }
 
     //主頁讀取功能
-    public IActionResult Index(){
-        var employees = _context.Employees.ToList();
-        return View(employees);
+    public IActionResult Index(string keyword)
+    {
+        // 從資料庫中取得所有員工資料，轉換為 IQueryable，方便後續條件過濾
+        var employees = _context.Employees.AsQueryable();
+
+        // 如果 keyword 不是空字串或只有空白
+        if (!string.IsNullOrWhiteSpace(keyword))
+        {
+            // 根據關鍵字篩選符合條件的員工
+            // 查詢條件為：姓名、電話 或 職稱 包含該關鍵字
+            employees = employees.Where(e => 
+                e.Name.Contains(keyword) ||
+                e.Phone.Contains(keyword) ||
+                e.Position.Contains(keyword));
+        }
+
+        // 將篩選後的結果轉換為清單 (List)，並傳回給 View 顯示
+        return View(employees.ToList());
     }
   
     //新增頁面+功能

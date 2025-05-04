@@ -227,3 +227,4 @@ C:\Users\Wei\Desktop\MyEmployee\obj\Debug\net9.0\refint\MyEmployee.dll
 C:\Users\Wei\Desktop\MyEmployee\obj\Debug\net9.0\MyEmployee.pdb
 C:\Users\Wei\Desktop\MyEmployee\obj\Debug\net9.0\MyEmployee.genruntimeconfig.cache
 C:\Users\Wei\Desktop\MyEmployee\obj\Debug\net9.0\ref\MyEmployee.dll
+C:\Users\Wei\Desktop\MyEmployee\obj\Debug\net9.0\MyEmployee.sourcelink.json

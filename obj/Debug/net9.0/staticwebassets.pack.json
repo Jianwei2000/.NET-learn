@@ -257,8 +257,24 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\Users\\Wei\\Desktop\\MyEmployee\\wwwroot\\uploads\\13561282-4d25-41c4-9b77-3d9f31d31d69.jpg",
+      "PackagePath": "staticwebassets\\uploads\\13561282-4d25-41c4-9b77-3d9f31d31d69.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Wei\\Desktop\\MyEmployee\\wwwroot\\uploads\\61dedce6-07f5-4a61-a757-b1e7b4a093f6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\61dedce6-07f5-4a61-a757-b1e7b4a093f6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Wei\\Desktop\\MyEmployee\\wwwroot\\uploads\\948bc5e1-5fe5-4669-955c-cb084c284388.jpg",
+      "PackagePath": "staticwebassets\\uploads\\948bc5e1-5fe5-4669-955c-cb084c284388.jpg"
+    },
+    {
       "Id": "C:\\Users\\Wei\\Desktop\\MyEmployee\\wwwroot\\uploads\\b18ee71c-3385-4848-ae0f-72f5dc10ee85.jpg",
       "PackagePath": "staticwebassets\\uploads\\b18ee71c-3385-4848-ae0f-72f5dc10ee85.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Wei\\Desktop\\MyEmployee\\wwwroot\\uploads\\c24ce2ca-3600-4967-8b82-d31cffbe918b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c24ce2ca-3600-4967-8b82-d31cffbe918b.jpg"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MyEmployee.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
