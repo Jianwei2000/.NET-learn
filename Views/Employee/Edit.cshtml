@@ -1,0 +1,62 @@
+@model MyEmployee.Models.Employee;
+
+<div>
+    <h1>編輯員工頁</h1>
+</div>
+<hr>
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+
+  <div class="mb-3">
+    <label asp-for="Name" class="form-label">姓名</label>
+    <input asp-for="Name" type="text" class="form-control"  >
+    @* <span asp-validation-for="Name" class="text-danger"></span> *@
+  </div>
+  <div class="mb-3">
+    <label asp-for="Phone" class="form-label">電話</label>
+    <input asp-for="Phone" type="text" class="form-control"  >
+    @* <span asp-validation-for="Phone" class="text-danger"></span> *@
+  </div>
+  <div class="mb-3">
+    <label asp-for="Position" class="form-label">職位</label>
+    <Select asp-for="Position" class="form-control">
+      <option value="">-- 請選擇 --</option>
+      <option value="系統工程師">系統工程師</option>
+      <option value="網頁工程師">網頁工程師</option>
+      <option value="切版工程師">切版工程師</option>
+      <option value="實習生">實習生</option>
+    </Select>
+    @* <span asp-validation-for="Position" class="text-danger"></span> *@
+  </div>
+  <div class="mb-3">
+    <label asp-for="Salary" class="form-label">薪水</label>
+    <input asp-for="Salary" type="number" class="form-control"  >
+    @* <span asp-validation-for="Department" class="text-danger"></span> *@
+  </div>
+  <div class="mb-3">
+    <label asp-for="HireDate" class="form-label">入職日期</label>
+    <input asp-for="HireDate" type="date" class="form-control"  >
+    @* <span asp-validation-for="HireDate" class="text-danger"></span> *@
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">目前大頭貼</label><br />
+    @if (!string.IsNullOrEmpty(Model.PhotoUrl))
+    {
+        <img src="~/uploads/@Model.PhotoUrl" alt="頭貼" width="100" />
+    }
+    else
+    {
+        <p class="text-muted">尚未上傳</p>
+    }
+</div>
+
+<div class="mb-3">
+    <label class="form-label">更換大頭貼</label>
+    <input type="file" name="Photo" class="form-control" accept="image/*" />
+</div>
+
+  
+    <button type="submit" class="btn btn-primary">儲存</button>
+    <a asp-action="Index" class="btn btn-secondary">取消</a>
+</form>
