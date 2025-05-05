@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MyEmployee.Data;
 using MyEmployee.Models;
 
@@ -113,6 +114,9 @@ public class EmployeeController : Controller
 
         if (ModelState.IsValid)
         {
+            // 從資料庫取出原始資料
+            var existingEmployee = await _context.Employees.AsNoTracking().FirstOrDefaultAsync(e => e.Id == id);
+
             if (Photo != null && Photo.Length > 0){
                 // 建立 uploads 路徑
                 var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
@@ -130,6 +134,9 @@ public class EmployeeController : Controller
 
                  // 儲存檔名到資料庫欄位
                 employee.PhotoUrl = uniqueFileName;
+            } else{
+                // 沒有上傳新圖片，保留原本的圖片路徑
+                employee.PhotoUrl = existingEmployee.PhotoUrl;
             }
 
             _context.Update(employee);

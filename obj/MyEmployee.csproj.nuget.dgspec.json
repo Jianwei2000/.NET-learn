@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Wei\\Desktop\\MyEmployee\\MyEmployee.csproj": {}
+    "C:\\Users\\User\\Desktop\\MyEmployee\\MyEmployee.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Wei\\Desktop\\MyEmployee\\MyEmployee.csproj": {
+    "C:\\Users\\User\\Desktop\\MyEmployee\\MyEmployee.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wei\\Desktop\\MyEmployee\\MyEmployee.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\MyEmployee\\MyEmployee.csproj",
         "projectName": "MyEmployee",
-        "projectPath": "C:\\Users\\Wei\\Desktop\\MyEmployee\\MyEmployee.csproj",
-        "packagesPath": "C:\\Users\\Wei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wei\\Desktop\\MyEmployee\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\MyEmployee\\MyEmployee.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\MyEmployee\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Wei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -51,6 +51,12 @@
           "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.4, )"
             },
