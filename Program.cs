@@ -6,6 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// 加入 Session 服務
+builder.Services.AddSession();
+
 //註冊DbContext
 builder.Services.AddDbContext<AppDbContext>
 (options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -24,6 +27,9 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseAuthorization();
+
+// 啟用 Session
+app.UseSession();
 
 app.MapStaticAssets();
 

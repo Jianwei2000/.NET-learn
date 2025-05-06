@@ -16,6 +16,10 @@ public class EmployeeController : Controller
     //主頁讀取功能
     public IActionResult Index(string keyword)
     {
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("Username")))
+        {
+            return RedirectToAction("Login", "Account");
+        }
         // 從資料庫中取得所有員工資料，轉換為 IQueryable，方便後續條件過濾
         var employees = _context.Employees.AsQueryable();
 
@@ -37,6 +41,11 @@ public class EmployeeController : Controller
     //新增頁面+功能
     public IActionResult Create()
     {
+        if (string.IsNullOrEmpty(HttpContext.Session.GetString("Username")))
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
         return View(); 
     }
 

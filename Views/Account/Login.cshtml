@@ -1,0 +1,24 @@
+@model MyEmployee.Models.Account;
+
+<div>
+    <h1>請先登入</h1>
+</div>
+<hr>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+<form asp-action="Login" method="post">
+  <div class="mb-3">
+    <label for="username" class="form-label">帳號</label>
+    <input type="text" class="form-control" id="username" name="username">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">密碼</label>
+    <input type="password" class="form-control" id="password" name="password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">登入</button>
+</form>
